@@ -106,7 +106,7 @@
   margin-top: 2rem;
   padding: 1rem 2.5rem;
   background: var(--primary);
-  color: var(--bg-dark);
+  color: var(--bg-dark) !important;
   text-decoration: none;
   font-weight: 700;
   text-transform: uppercase;
@@ -149,31 +149,32 @@
 
 @media (max-width: 768px) {
   .hero-content-wrapper {
-    padding: 2rem;
+    padding: 1.5rem;
     justify-content: center;
-    gap: 2rem;
-    height: 80vh; /* More vertical space to prevent overlapping */
+    gap: 1.5rem;
+    height: 70vh; 
   }
   .hero-text-block {
     align-items: center;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
   .hero-title-main {
-    font-size: clamp(3rem, 10vw, 6rem);
+    font-size: clamp(2.5rem, 12vw, 4.5rem) !important; /* Force smaller size on mobile */
     text-align: center;
     width: 100%;
+    line-height: 1.1;
   }
   .hero-title-main.accent {
-    margin-top: 0; /* Remove negative margin to prevent overlap */
+    margin-top: 0.5rem !important; /* Add spacing instead of overlap */
   }
   .hero-subtitle {
     align-self: center;
     text-align: center;
-    border-right: none;
-    border-left: none;
-    border-bottom: 2px solid var(--primary);
-    padding: 1.5rem;
-    max-width: 90%;
+    border: none;
+    border-bottom: 1px solid var(--primary);
+    padding: 1rem;
+    max-width: 95%;
+    background: rgba(5, 5, 5, 0.6);
   }
 }
