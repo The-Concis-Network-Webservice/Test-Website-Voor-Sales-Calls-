@@ -12,8 +12,9 @@ const Hero = () => {
   });
   const { t } = useTranslation();
 
-  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", isMobile ? "0%" : "50%"]);
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", isMobile ? "0%" : "100%"]);
   const opacityText = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const scrollToMenu = () => {

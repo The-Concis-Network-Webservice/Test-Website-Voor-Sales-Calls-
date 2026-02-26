@@ -128,11 +128,15 @@
 
 @media (max-width: 768px) {
   .s-navbar {
-    padding: 0 1.5rem;
-    width: 100% !important; /* Override inline styles temporarily */
+    padding: 0 1rem;
+    width: 100% !important; 
     border-radius: 0 !important;
     top: 0 !important;
     transform: none !important;
+    height: 60px;
+  }
+  .s-navbar-logo {
+    font-size: 1.1rem;
   }
   .s-navbar-links {
     display: none;
