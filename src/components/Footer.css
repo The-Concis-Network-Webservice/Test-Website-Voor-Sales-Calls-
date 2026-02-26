@@ -114,7 +114,7 @@
 
 @media (max-width: 1024px) {
   .s-footer {
-    padding: 6rem 2rem 2rem;
+    padding: 3rem 2rem 2rem; /* Reduced top padding significantly from 6rem (which was 10rem) */
   }
   .s-footer-massive-text {
     flex-direction: column;

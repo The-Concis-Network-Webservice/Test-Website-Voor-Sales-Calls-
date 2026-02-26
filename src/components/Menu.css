@@ -200,10 +200,18 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+  .s-menu-container {
+    padding: 6rem 0; /* Reduced from 10rem */
+  }
+  
   .s-menu-layout {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 3rem; /* Reduced from 4rem */
     padding: 0 2rem;
+  }
+  
+  .s-menu-section {
+    margin-bottom: 6rem; /* Reduced from 10rem */
   }
   
   .s-sidebar-sticky {
@@ -237,6 +245,7 @@
   
   .s-category-title {
     font-size: 3rem;
+    margin-bottom: 2rem; /* Reduced from 4rem */
   }
   
   .s-menu-card-image-wrap {

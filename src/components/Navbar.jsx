@@ -8,10 +8,12 @@ const Navbar = ({ onOpenReservation }) => {
   const { scrollY } = useScroll();
   const { t, language, toggleLanguage } = useTranslation();
   
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  
   // Condense navbar width on scroll for a cool floating pill effect
-  const navWidth = useTransform(scrollY, [0, 200], ["100%", "70%"]);
-  const navY = useTransform(scrollY, [0, 200], [0, 20]);
-  const navRadius = useTransform(scrollY, [0, 200], ["0px", "50px"]);
+  const navWidth = useTransform(scrollY, [0, 200], [isMobile ? "100%" : "100%", isMobile ? "100%" : "70%"]);
+  const navY = useTransform(scrollY, [0, 200], [0, isMobile ? 0 : 20]);
+  const navRadius = useTransform(scrollY, [0, 200], ["0px", isMobile ? "0px" : "50px"]);
 
   useEffect(() => {
     const handleScroll = () => {

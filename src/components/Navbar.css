@@ -127,13 +127,20 @@
 }
 
 @media (max-width: 768px) {
+  .s-navbar-wrapper {
+    padding: 0;
+    width: 100%;
+  }
   .s-navbar {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     width: 100% !important; 
     border-radius: 0 !important;
     top: 0 !important;
     transform: none !important;
     height: 60px;
+    background: rgba(5, 5, 5, 0.9) !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
   .s-navbar-logo {
     font-size: 1.1rem;
