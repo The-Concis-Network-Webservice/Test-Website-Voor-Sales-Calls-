@@ -28,6 +28,9 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 h1 {

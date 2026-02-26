@@ -1,4 +1,4 @@
-.hero-container.s-tier {
+.hero-container {
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -23,7 +23,7 @@
   transition: filter 1s ease;
 }
 
-.hero-container.s-tier:hover .hero-background {
+.hero-container:hover .hero-background {
   filter: brightness(0.8);
 }
 

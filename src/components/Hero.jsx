@@ -21,7 +21,7 @@ const Hero = () => {
   };
 
   return (
-    <section ref={containerRef} className="hero-container s-tier">
+    <section ref={containerRef} className="hero-container">
       <motion.div 
         className="hero-background"
         style={{ y: yBg }}

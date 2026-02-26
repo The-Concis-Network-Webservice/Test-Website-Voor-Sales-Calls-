@@ -1,4 +1,4 @@
-// Using the S-tier sticky side navigation design
+// Using the sticky side navigation design
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useTranslation } from '../context/LanguageContext';
