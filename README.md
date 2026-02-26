@@ -12,7 +12,7 @@ Bekijk de website hier: [Test Resto Live](https://The-Concis-Network-Webservice.
 - **Interactieve Menu Kaart**: Een asymmetrische menu-indeling met sticky categorie-navigatie en dynamische productkaarten.
 - **Reserveringssysteem**: Een visueel aantrekkelijke reservation-overlay voor een complete gast-ervaring.
 
-## 🛠️ Technologie Standaard
+## Technologie Standaard
 - **Frontend**: React + Vite
 - **Styling**: Vanilla CSS (Custom Design System)
 - **Animaties**: Framer Motion
