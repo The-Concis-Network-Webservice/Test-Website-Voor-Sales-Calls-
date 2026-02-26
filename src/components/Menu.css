@@ -1,0 +1,252 @@
+.s-menu-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  padding: 10rem 0;
+  color: var(--text-main);
+  position: relative;
+  z-index: 2;
+}
+
+.s-menu-layout {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 8rem;
+  align-items: start;
+}
+
+/* Sidebar Styles */
+.s-sidebar-sticky {
+  position: sticky;
+  top: 150px;
+  /* Visual line separating sidebar from content */
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 2rem;
+}
+
+.s-sidebar-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.s-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.s-nav-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  text-align: left;
+  position: relative;
+  transition: color 0.3s;
+  padding: 0.5rem 0;
+}
+
+.s-nav-btn.active, .s-nav-btn:hover {
+  color: var(--text-main);
+}
+
+.s-nav-btn::before {
+  content: '';
+  position: absolute;
+  left: -2rem; /* Align with border-left of sticky container */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 0%;
+  background: var(--primary);
+  transition: height 0.3s ease;
+}
+
+.s-nav-btn.active::before {
+  height: 100%;
+}
+
+.s-sidebar-info {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.s-special-order-cta {
+  display: inline-block !important;
+  margin-top: 1rem !important;
+  padding: 0.8rem 1.5rem !important;
+  background: transparent !important;
+  color: var(--primary) !important;
+  border: 1px solid var(--primary) !important;
+  text-decoration: none !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  border-radius: 100px !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  text-align: center !important;
+}
+
+.s-special-order-cta:hover {
+  background: var(--primary) !important;
+  color: var(--bg-dark) !important;
+  transform: scale(1.05) !important;
+}
+
+/* Main Content Styles */
+.s-menu-main {
+  padding-top: 2rem;
+}
+
+.s-menu-section {
+  margin-bottom: 10rem;
+  scroll-margin-top: 150px;
+}
+
+.s-category-title {
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.s-menu-items-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Redesigned Menu Cards */
+.s-menu-card {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  /* Hover effects handled by framer-motion partially, but we can add some base transitions */
+}
+
+.s-menu-card:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.s-menu-card-content {
+  flex: 1;
+}
+
+.s-menu-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+
+.s-menu-item-name {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+/* Apply color to name when card is hovered */
+.s-menu-card:hover .s-menu-item-name {
+  color: var(--primary);
+}
+
+.s-menu-item-price {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--text-muted);
+}
+
+.s-menu-item-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 80%;
+}
+
+/* Dynamic Image Wrap */
+.s-menu-card-image-wrap {
+  height: 120px;
+  overflow: hidden;
+  border-radius: 4px; /* Slight rounding for elegant look, not fully circular */
+  flex-shrink: 0;
+  /* Width is animated by framer-motion from 0 to 160px */
+}
+
+.s-menu-img {
+  width: 160px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .s-menu-layout {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding: 0 2rem;
+  }
+  
+  .s-sidebar-sticky {
+    position: relative;
+    top: 0;
+    border-left: none;
+    padding-left: 0;
+  }
+  
+  .s-sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .s-nav-btn {
+    background: rgba(255,255,255,0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+  }
+  
+  .s-nav-btn.active::before {
+    display: none;
+  }
+  
+  .s-nav-btn.active {
+    background: var(--primary);
+    color: var(--bg-dark);
+  }
+  
+  .s-category-title {
+    font-size: 3rem;
+  }
+  
+  .s-menu-card-image-wrap {
+    /* Show images persistently on mobile, since hover is tricky */
+    width: 80px !important;
+    height: 80px;
+    opacity: 1 !important;
+  }
+  
+  .s-menu-img {
+    width: 80px;
+  }
+}
